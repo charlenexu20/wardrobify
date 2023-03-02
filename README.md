@@ -3,7 +3,7 @@
 Team:
 
 * Person 1 - Which microservice?
-* Alissa Renteria - Shoes
+* Alissa Renteria - Shoess
 
 ## Design
 
