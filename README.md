@@ -4,6 +4,8 @@ Team:
 
 * Charlene Xu - Hats microservice?
 * Person 2 - Which microservice?
+* Person 1 - Which microservice?
+* Alissa Renteria - Shoess
 
 ## Design
 
