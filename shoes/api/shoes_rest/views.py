@@ -54,8 +54,10 @@ def api_shoes(request):
         )
     elif request.method == "POST":
         content = json.loads(request.body)
+
+
         try:
-            bin_href = content["bin"]["import_href"]
+            bin_href = content["bin"]
             bin = BinVO.objects.get(import_href=bin_href)
             content["bin"] = bin
         except BinVO.DoesNotExist:
@@ -65,7 +67,7 @@ def api_shoes(request):
         shoes = Shoes.objects.create(**content)
         return JsonResponse(
             shoes,
-            encoder=ShoesDetailEncoder,
+            encoder=ShoeDetailEncoder,
             safe=False,
         )
 
@@ -76,8 +78,8 @@ def api_shoe(request, pk):
             shoes = Shoes.objects.get(id=pk)
             return JsonResponse(
                 shoes,
-                encoder=ShoesDetailEncoder,
-                safe=False
+                encoder=ShoeDetailEncoder,
+                safe=False,
             )
         except Shoe.DoesNotExist:
             response = JsonResponse({"message": "Sorry this shoe does not exist"})

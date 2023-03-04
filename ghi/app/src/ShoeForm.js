@@ -22,11 +22,11 @@ function ShoeForm(props) {
         const response = await fetch(shoeUrl, fetchConfig)
         if(response.ok) {
             props.fetchShoes()
-            setNamemanufacturer("")
-            setNamemodel("")
-            setcolor("")
-            setphotoUrl("")
-            setBin("")
+            setNamemanufacturer(" ")
+            setNamemodel(" ")
+            setcolor(" ")
+            setphotoUrl(" ")
+            setBin(" ")
         }
     }
     const [Namemanufacturer, setNamemanufacturer] = useState("")
@@ -96,7 +96,7 @@ function ShoeForm(props) {
                                 {bins.map(bin => {
                                     return (
                                         <option key={bin.href} value={bin.href}>
-                                        {bin.closet_name}, Bin #{bin.bin_number}
+                                        {bin.closet_name}, Bin num{bin.bin_number}
                                         </option>
                                     );
                                 })}
