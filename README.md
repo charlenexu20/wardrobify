@@ -2,16 +2,19 @@
 
 Team:
 
-* Person 2 - Which microservice?
+* Alissa Renteria - Shoes microservice
 * Charlene Xu - Hats microservice
 
 ## Design
 
 ## Shoes microservice
+I Created two seperate models, one for Shoes and a BinVO.
 
-Explain your models and integration with the wardrobe
-microservice, here.
+For shoes, the required details needed to be input were the manufacturer name, model name, color and photo url however, it also needed a bin field which would link it to the BinVO model.
 
+The BinVO model had the job of storing all the different information provided from the Bin in my Wardrobes and then would create a unique reference.
+
+This would then provide a bin size, a unique bin number and the name of where it is stored aka the closet. I decided to input a bin size to see how much is being stored within that specific bin!
 ## Hats microservice
 
 - Install Django app into Django project settings
