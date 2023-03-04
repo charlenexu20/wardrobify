@@ -3,6 +3,8 @@ import MainPage from './MainPage';
 import Nav from './Nav';
 import ShoeForm from './ShoeForm';
 import ShoeList from './ShoeList';
+import HatForm from './HatForm';
+import HatsList from './HatsList';
 
 function App() {
   const [shoes, setShoes] = useState([])
@@ -35,6 +37,12 @@ function App() {
               <Route path='new' element={<ShoeForm fetchShoes={fetchShoes} />} />
             </Route>
 
+          <Route path="hats">
+            <Route path="new" element={<HatForm />} />
+          </Route >
+          <Route path="hats">
+            <Route path="" element={<HatsList />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
